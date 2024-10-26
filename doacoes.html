@@ -8,19 +8,9 @@
     <title>Doações</title>
   </head>
   <body>
-    <header>
-      <img class="logo" src="./assets/logo.png" alt="Logo" />
-      <nav class="menu">
-        <a href="./index.html">Início</a>
-        <a href="./alertas.html">Alertas</a>
-        <a href="./lugares-afetados.html">Lugares afetados</a>
-        <a href="./dicas.html">Dicas</a>
-      </nav>
-    </header>
-
     <div class="modal-overlay" id="donationModal">
       <div class="modal">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <a class="close-btn" href="./index.html">&times;</a>
         <div id="modal-content">
           <h2>Ajude quem perdeu tudo com as enchentes</h2>
           <div class="amount-btns">
@@ -40,16 +30,6 @@
 
       function openModal() {
         document.getElementById("donationModal").style.display = "flex";
-      }
-
-      function closeModal() {
-        document.getElementById("donationModal").style.display = "none";
-        document.getElementById("thankYouMessage").innerHTML = ""; // Limpa a mensagem ao fechar
-        selectedAmount = null;
-        // Redefine o conteúdo para o estado inicial
-        document.querySelectorAll(".amount-btns button").forEach((btn) => {
-          btn.classList.remove("selected");
-        });
       }
 
       function selectAmount(button, amount) {

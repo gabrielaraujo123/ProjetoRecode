@@ -41,6 +41,7 @@
 
 .close-btn {
   font-size: 24px;
+  text-decoration: none;
   color: #555;
   cursor: pointer;
   position: absolute;
