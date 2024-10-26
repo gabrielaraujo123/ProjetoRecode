@@ -243,17 +243,12 @@ header {
 }
 .image-upload-label {
   color: #000000;
-  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   font-family: "montserrat", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
-  transition: background-color 0.3s;
-}
-.image-upload-label:hover {
-  background-color: #0056b3;
 }
 .submit-button {
   margin-top: 0.5rem;
@@ -297,6 +292,10 @@ header {
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+.modal-content h2 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+}
 #reportModal.show .modal-content {
   transform: translateY(0);
   opacity: 1;
@@ -310,11 +309,22 @@ header {
   }
   .start-form textarea {
     min-height: 150px;
+    font-size: 0.6rem;
+    width: 21rem;
+    padding: 0.75rem;
   }
   .start-form input[type="text"],
-  .start-form input[type="tel"],
-  .start-form textarea {
+  .start-form input[type="tel"] {
+    width: 9rem;
     padding: 0.75rem;
     font-size: 0.6rem;
+  }
+  .image-upload-input {
+    font-size: 0.7rem;
+
+    width: 100%;
+  }
+  .image-upload-labe {
+    font-size: 0.4rem;
   }
 }
