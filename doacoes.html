@@ -28,7 +28,7 @@
       </nav>
     </header>
 
-    <div class="modal-overlay" id="donationModal">
+    <div class="modal-overlay" id="doacaoModal">
       <div class="modal">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <div id="modal-content">
@@ -41,7 +41,7 @@
           <button class="donate-btn" id="donateBtn" onclick="donate()" disabled>
             Doar
           </button>
-          <div id="thankYouMessage" class="error-message"></div>
+          <div id="ObrigadaPelaMensagem" class="error-message"></div>
         </div>
       </div>
     </div>
@@ -50,12 +50,12 @@
       let selectedAmount = null;
 
       function openModal() {
-        document.getElementById("donationModal").style.display = "flex";
+        document.getElementById("doacaoModal").style.display = "flex";
       }
 
       function closeModal() {
-        document.getElementById("donationModal").style.display = "none";
-        document.getElementById("thankYouMessage").innerHTML = "";
+        document.getElementById("doacaoModal").style.display = "none";
+        document.getElementById("ObrigadaPelaMensagem").innerHTML = "";
         selectedAmount = null;
 
         document.querySelectorAll(".amount-btns button").forEach((btn) => {
@@ -73,12 +73,12 @@
         button.classList.add("selected");
         button.classList.remove("not-selected");
         document.getElementById("donateBtn").disabled = false;
-        document.getElementById("thankYouMessage").innerHTML = "";
+        document.getElementById("ObrigadaPelaMensagem").innerHTML = "";
       }
 
       function donate() {
         if (selectedAmount) {
-          document.getElementById("thankYouMessage").innerHTML = `
+          document.getElementById("ObrigadaPelaMensagem").innerHTML = `
           <p>Agradecemos sua doação de R$${selectedAmount}!</p>
           <p>Sua contribuição faz a diferença para quem precisa.</p>
         `;
