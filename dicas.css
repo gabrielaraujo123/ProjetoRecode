@@ -31,7 +31,7 @@ body {
 .category-nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 35px;
     margin-bottom: 30px;
     flex-wrap: wrap;
 }
@@ -39,11 +39,9 @@ body {
 .content-section li{
     margin-left: 10px;
 }
- {
-    margin: 12px;
-}
+ 
 .cat-btn {
-    padding: 12px 24px;
+    padding: 12px 66px;
     border: none;
     border-radius: 25px;
     background-color: #ecf0f1;
