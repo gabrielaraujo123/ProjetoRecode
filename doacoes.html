@@ -20,7 +20,7 @@
         opacity: 0;
         transition: visibility 0s, opacity 0.3s;
       }
-  
+
       .modal {
         background-color: #fff;
         padding: 20px;
@@ -30,9 +30,9 @@
         max-width: 400px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       }
-  
+
       .amount-btns button {
-        background-color: #007BFF;
+        background-color: #007bff;
         color: #fff;
         padding: 10px 20px;
         margin: 5px;
@@ -41,11 +41,11 @@
         cursor: pointer;
         font-size: 16px;
       }
-  
+
       .amount-btns button:hover {
         background-color: #0056b3;
       }
-  
+
       .donate-btn {
         background-color: #28a745;
         color: #fff;
@@ -56,11 +56,11 @@
         cursor: pointer;
         font-size: 18px;
       }
-  
+
       .donate-btn:hover {
         background-color: #218838;
       }
-  
+
       .close-btn {
         position: absolute;
         top: 10px;
@@ -69,58 +69,53 @@
         color: #333;
         cursor: pointer;
       }
-  
+
       .modal-overlay.show {
         visibility: visible;
         opacity: 1;
       }
-      
     </style>
   </head>
   <body>
-<!-- Botão para abrir a modal -->
-<button onclick="openModal()">Fazer uma Doação!</button>
+    <button onclick="openModal()">Fazer uma Doação!</button>
 
-<!-- Modal de doação -->
-<div class="modal-overlay" id="donationModal">
-  <div class="modal">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h2>Ajude quem perdeu tudo com as enchentes</h2>
-    <div class="amount-btns">
-      <button onclick="selectAmount(10)">R$10</button>
-      <button onclick="selectAmount(20)">R$20</button>
-      <button onclick="selectAmount(30)">R$30</button>
+    <div class="modal-overlay" id="donationModal">
+      <div class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Ajude quem perdeu tudo com as enchentes</h2>
+        <div class="amount-btns">
+          <button onclick="selectAmount(10)">R$10</button>
+          <button onclick="selectAmount(20)">R$20</button>
+          <button onclick="selectAmount(30)">R$30</button>
+        </div>
+        <button class="donate-btn" onclick="donate()">Doar</button>
+      </div>
     </div>
-    <button class="donate-btn" onclick="donate()">Doar</button>
-  </div>
-</div>
 
-<script>
-  let selectedAmount = null;
+    <script>
+      let selectedAmount = null;
 
-  function openModal() {
-    document.getElementById('donationModal').classList.add('show');
-  }
+      function openModal() {
+        document.getElementById("donationModal").classList.add("show");
+      }
 
-  function closeModal() {
-    document.getElementById('donationModal').classList.remove('show');
-  }
+      function closeModal() {
+        document.getElementById("donationModal").classList.remove("show");
+      }
 
-  function selectAmount(amount) {
-    selectedAmount = amount;
-    alert(`Valor selecionado: R$${amount}`);
-  }
+      function selectAmount(amount) {
+        selectedAmount = amount;
+        alert(`Valor selecionado: R$${amount}`);
+      }
 
-  function donate() {
-    if (selectedAmount) {
-      alert(`Obrigado por sua doação de R$${selectedAmount}!`);
-      closeModal();
-    } else {
-      alert('Por favor, selecione um valor para doar.');
-    }
-  }
-</script>
-
-</body>
-</html>  </body>
+      function donate() {
+        if (selectedAmount) {
+          alert(`Obrigado por sua doação de R$${selectedAmount}!`);
+          closeModal();
+        } else {
+          alert("Por favor, selecione um valor para doar.");
+        }
+      }
+    </script>
+  </body>
 </html>
