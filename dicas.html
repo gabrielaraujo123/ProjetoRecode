@@ -10,28 +10,36 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="./assets/logo.png" alt="" />
-      <nav class="menu">
-        <a href="./index.html">Início</a>
-        <a href="./alertas.html">Alertas</a>
-        <a href="./lugares-afetados.html">Lugares afetados</a>
-        <a href="./dicas.html">Dicas</a>
-      </nav>
-      <div class="doacao-button">
-        <a href="#" onclick="openModal()">Faça sua doação!</a>
-      </div>
-    </header>
+        <img class="logo" src="./assets/logo.png" alt="" />
+        <nav>
+          <ul class="menu">
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./alertas.html">Alertas</a></li>
+            <li><a href="./lugares-afetados.html">Lugares afetados</a></li>
+            <li><a href="./dicas.html">Dicas</a></li>
+          </ul>
+        </nav>
+        <div class="doacao-button">
+          <a href="#" onclick="openModal()">Faça sua doação!</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
 
-    <div class="modal" id="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Ajude as vítimas de enchentes</h2>
-        <p>
-          Sua doação pode fazer a diferença para muitas famílias afetadas pelas
-          enchentes.
-        </p>
-        <p><strong>Chave PIX:</strong> 123.456.789-00</p>
-        <p>Agradecemos imensamente pela sua contribuição!</p>
+    <div class="modal" id="donationModal">
+        <div class="modal-content">
+          <span class="close" onclick="closeDonationModal()">&times;</span>
+          <h2>Ajude as vítimas de enchentes</h2>
+          <p>
+            Sua doação pode fazer a diferença para muitas famílias afetadas pelas
+            enchentes.
+          </p>
+          <p><strong>Chave PIX:</strong> doacao@gmail.com</p>
+          <p>Agradecemos imensamente pela sua contribuição!</p>
+        </div>
       </div>
     </div>
     <main class="main-content">
@@ -234,21 +242,18 @@
   </footer>
 
   <script>
-      // Navegação entre categorias
       document.querySelectorAll('.cat-btn').forEach(button => {
           button.addEventListener('click', () => {
-              // Remove classe active de todos os botões e seções
               document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
               document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
               
-              // Adiciona classe active ao botão clicado
               button.classList.add('active');
               
-              // Mostra a seção correspondente
               const targetId = button.getAttribute('data-target');
               document.getElementById(targetId).classList.add('active');
           });
       });
   </script>
+      <script src="./script.js"></script>
   </body>
 </html>

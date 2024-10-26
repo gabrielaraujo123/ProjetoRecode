@@ -86,7 +86,7 @@ header {
     padding-top: 2rem;
     margin-top: -1rem;
     top: 0;
-    left: 50%;
+    left: 45%;
   }
 }
 .hamburger.open span:nth-child(1) {

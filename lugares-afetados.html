@@ -10,17 +10,35 @@
   <body>
     <header>
       <img class="logo" src="./assets/logo.png" alt="" />
-      <nav class="menu">
-        <a href="./index.html">Início</a>
-        <a href="./alertas.html">Alertas</a>
-        <a href="./lugares-afetados.html">Lugares afetados</a>
-        <a href="./dicas.html">Dicas</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="./alertas.html">Alertas</a></li>
+          <li><a href="./lugares-afetados.html">Lugares afetados</a></li>
+          <li><a href="./dicas.html">Dicas</a></li>
+        </ul>
       </nav>
       <div class="doacao-button">
         <a href="#" onclick="openModal()">Faça sua doação!</a>
       </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
-
+    <div class="modal" id="donationModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeDonationModal()">&times;</span>
+        <h2>Ajude as vítimas de enchentes</h2>
+        <p>
+          Sua doação pode fazer a diferença para muitas famílias afetadas pelas
+          enchentes.
+        </p>
+        <p><strong>Chave PIX:</strong> doacao@gmail.com</p>
+        <p>Agradecemos imensamente pela sua contribuição!</p>
+      </div>
+    </div>
     <div class="modal" id="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -91,12 +109,16 @@
           <div class="footer-section">
             <h3>Lugares Afetados</h3>
             <a href="#lugares-afetados" class="footer-link">Vale do Taquari</a>
-            <a href="#lugares-afetados" class="footer-link">Vale do Caí e Rio Pardo</a>
+            <a href="#lugares-afetados" class="footer-link"
+              >Vale do Caí e Rio Pardo</a
+            >
             <a href="#lugares-afetados" class="footer-link">Porto Alegre</a>
           </div>
           <div class="footer-section">
             <h3>Lugares em Risco</h3>
-            <a href="#lugares-em-risco" class="footer-link">Região Metropolitana de Porto Alegre</a>
+            <a href="#lugares-em-risco" class="footer-link"
+              >Região Metropolitana de Porto Alegre</a
+            >
             <a href="#lugares-em-risco" class="footer-link">Vale dos Sinos</a>
           </div>
           <div class="footer-section">
@@ -105,7 +127,7 @@
             <a href="#ajuda" class="footer-link">Auxílio Financeiro</a>
           </div>
         </div>
-      </footer>      
+      </footer>
       <p>&copy; 2024 Enchentes RS - Todos os direitos reservados.</p>
       <p><a href="#lugares-afetados">Início</a> | <a href="#ajuda">Ajuda</a></p>
     </footer>

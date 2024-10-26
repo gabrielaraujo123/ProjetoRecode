@@ -11,38 +11,54 @@
   <body>
     <header>
       <img class="logo" src="./assets/logo.png" alt="" />
-      <nav class="menu">
-        <a href="./index.html">Início</a>
-        <a href="./alertas.html">Alertas</a>
-        <a href="./lugares-afetados.html">Lugares afetados</a>
-        <a href="./dicas.html">Dicas</a>
+      <nav>
+        <ul class="menu">
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="./alertas.html">Alertas</a></li>
+          <li><a href="./lugares-afetados.html">Lugares afetados</a></li>
+          <li><a href="./dicas.html">Dicas</a></li>
+        </ul>
       </nav>
       <div class="doacao-button">
         <a href="#" onclick="openModal()">Faça sua doação!</a>
       </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
-
     <main>
-      <div> <h1> Alertas de enchentes</h1>
-          <h2>Locais com relatos de enchentes</h2>
+      <div>
+        <h1>Alertas de enchentes</h1>
+        <h2>Locais com relatos de enchentes</h2>
         <div class="container">
           <section class="galery">
             <div class="fotos">
-              <img src="./resized_image_1.jpg" alt="Foto 1">
-              <img src="./resized_image_2.jpg" alt="Foto 2">
-              <img src="./resized_image_3.jpg" alt="Foto 3">
-              <img src="./resized_image_4.jpg" alt="Foto 4">
-              <img src="./resized_image_1.jpg" alt="Foto 1">
-
+              <img src="./resized_image_1.jpg" alt="Foto 1" />
+              <img src="./resized_image_2.jpg" alt="Foto 2" />
+              <img src="./resized_image_3.jpg" alt="Foto 3" />
+              <img src="./resized_image_4.jpg" alt="Foto 4" />
+              <img src="./resized_image_1.jpg" alt="Foto 1" />
             </div>
-        
-
+            <div class="modal" id="donationModal">
+              <div class="modal-content">
+                <span class="close" onclick="closeDonationModal()"
+                  >&times;</span
+                >
+                <h2>Ajude as vítimas de enchentes</h2>
+                <p>
+                  Sua doação pode fazer a diferença para muitas famílias
+                  afetadas pelas enchentes.
+                </p>
+                <p><strong>Chave PIX:</strong> doacao@gmail.com</p>
+                <p>Agradecemos imensamente pela sua contribuição!</p>
+              </div>
+            </div>
           </section>
         </div>
-
       </div>
-      
-      </main>
+    </main>
 
     <div class="modal" id="modal">
       <div class="modal-content">
