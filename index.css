@@ -81,10 +81,11 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url("./assets/start-background.png");
+  background-position: center 5%;
+  height: 100vh;
+  background-size: cover;
   gap: 1rem;
-}
-.container-start button {
-  cursor: pointer;
 }
 .article-start {
   display: flex;
@@ -92,6 +93,11 @@ header {
   justify-content: center;
   gap: 0.5rem;
   align-items: center;
+  margin-top: 4rem;
+  color: #fff;
+}
+.article-start h1 {
+  font-size: 2rem;
 }
 .article-start img {
   width: 40rem;
@@ -99,6 +105,20 @@ header {
 .article-start .seta-icon {
   width: 3rem;
   padding-top: 1rem;
+}
+.container-start .relatar-button {
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+  background: rgb(20, 116, 145);
+  font-size: 1.3rem;
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+.container-start .relatar-button:hover {
+  background: rgb(26, 145, 181);
+  transform: scale(1.05);
 }
 #reportModal h2 {
   padding-bottom: 1rem;
