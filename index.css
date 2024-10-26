@@ -17,7 +17,16 @@ header {
   text-decoration: none;
 }
 .doacao-button a {
+  /*text-decoration: none;*/
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #0cc0df;
   text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: color 0.3s ease;
 }
 /* Estilos para o modal */
 .modal {
