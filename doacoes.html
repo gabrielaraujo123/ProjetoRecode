@@ -6,9 +6,18 @@
     <link rel="stylesheet" href="./doacoes.css" />
     <link rel="stylesheet" href="./index.css" />
     <title>Doações</title>
+    <style>
+      .donate-btn:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+      .error-message {
+        color: red;
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body>
-    <div class="modal-overlay" id="donationModal">
       <div class="modal">
         <a class="close-btn" href="./index.html">&times;</a>
         <div id="modal-content">
@@ -18,9 +27,10 @@
             <button onclick="selectAmount(this, 20)">R$20</button>
             <button onclick="selectAmount(this, 30)">R$30</button>
           </div>
-          <button class="donate-btn" onclick="donate()">Doar</button>
-          <!-- Div onde a mensagem de agradecimento será exibida -->
-          <div id="thankYouMessage"></div>
+          <button class="donate-btn" id="donateBtn" onclick="donate()" disabled>
+            Doar
+          </button>
+          <div id="ObrigadaPelaMensagem" class="error-message"></div>
         </div>
       </div>
     </div>
@@ -29,8 +39,9 @@
       let selectedAmount = null;
 
       function openModal() {
-        document.getElementById("donationModal").style.display = "flex";
+        document.getElementById("doacaoModal").style.display = "flex";
       }
+
 
       function selectAmount(button, amount) {
         selectedAmount = amount;
@@ -40,12 +51,13 @@
         });
         button.classList.add("selected");
         button.classList.remove("not-selected");
+        document.getElementById("donateBtn").disabled = false;
+        document.getElementById("ObrigadaPelaMensagem").innerHTML = "";
       }
 
       function donate() {
         if (selectedAmount) {
-          // Exibe a mensagem de agradecimento abaixo dos botões de doação
-          document.getElementById("thankYouMessage").innerHTML = `
+          document.getElementById("ObrigadaPelaMensagem").innerHTML = `
           <p>Agradecemos sua doação de R$${selectedAmount}!</p>
           <p>Sua contribuição faz a diferença para quem precisa.</p>
         `;
