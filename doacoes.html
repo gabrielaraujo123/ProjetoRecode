@@ -7,61 +7,46 @@
     <link rel="stylesheet" href="./index.css" />
     <title>Doações</title>
     <style>
-      .donate-btn:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-      }
-      .error-message {
-        color: red;
-        margin-top: 10px;
+      /* Estilo da chave PIX */
+      .pix-key {
+        margin-top: 20px; /* Espaçamento acima da chave PIX */
+        font-size: 18px; /* Tamanho da fonte */
+        font-weight: bold; /* Negrito */
+        text-align: center; /* Centraliza o texto */
       }
     </style>
   </head>
   <body>
+    <header>
+      <img class="logo" src="./assets/logo.png" alt="Logo" />
+      <nav class="menu">
+        <a href="./index.html">Início</a>
+        <a href="./alertas.html">Alertas</a>
+        <a href="./lugares-afetados.html">Lugares afetados</a>
+        <a href="./dicas.html">Dicas</a>
+      </nav>
+    </header>
+
+    <div class="modal-overlay" id="donationModal">
       <div class="modal">
-        <a class="close-btn" href="./index.html">&times;</a>
+        <span class="close-btn" onclick="closeModal()">&times;</span>
         <div id="modal-content">
           <h2>Ajude quem perdeu tudo com as enchentes</h2>
-          <div class="amount-btns">
-            <button onclick="selectAmount(this, 10)">R$10</button>
-            <button onclick="selectAmount(this, 20)">R$20</button>
-            <button onclick="selectAmount(this, 30)">R$30</button>
+          <div class="pix-key">
+            Chave PIX: doeparariograndedonorte@gmail.com
           </div>
-          <button class="donate-btn" id="donateBtn" onclick="donate()" disabled>
-            Doar
-          </button>
-          <div id="ObrigadaPelaMensagem" class="error-message"></div>
+          <p>Agradecemos sua generosidade!</p>
         </div>
       </div>
     </div>
 
     <script>
-      let selectedAmount = null;
-
       function openModal() {
-        document.getElementById("doacaoModal").style.display = "flex";
+        document.getElementById("donationModal").style.display = "flex";
       }
 
-
-      function selectAmount(button, amount) {
-        selectedAmount = amount;
-        document.querySelectorAll(".amount-btns button").forEach((btn) => {
-          btn.classList.remove("selected");
-          btn.classList.add("not-selected");
-        });
-        button.classList.add("selected");
-        button.classList.remove("not-selected");
-        document.getElementById("donateBtn").disabled = false;
-        document.getElementById("ObrigadaPelaMensagem").innerHTML = "";
-      }
-
-      function donate() {
-        if (selectedAmount) {
-          document.getElementById("ObrigadaPelaMensagem").innerHTML = `
-          <p>Agradecemos sua doação de R$${selectedAmount}!</p>
-          <p>Sua contribuição faz a diferença para quem precisa.</p>
-        `;
-        }
+      function closeModal() {
+        document.getElementById("donationModal").style.display = "none";
       }
     </script>
   </body>
