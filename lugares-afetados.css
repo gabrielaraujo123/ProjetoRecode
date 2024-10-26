@@ -1,113 +1,67 @@
-
 /* Definições globais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f8fa;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header */
-header {
-    background-color: #005a8e;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-header p {
-    font-size: 1.1rem;
-    color: #e0e0e0;
-}
-
-/* Menu de navegação */
-nav {
-    background-color: #004a70;
-    padding: 10px 0;
-}
-nav ul {
-    list-style: none;
-    text-align: center;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-nav ul li a:hover {
-    color: #aad4f3;
-}
-
-/* Container principal */
 .container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Seções e Cards */
 .section {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .section h2 {
-    font-size: 2rem;
-    color: #005a8e;
-    margin-bottom: 15px;
-    border-bottom: 3px solid #005a8e;
-    display: inline-block;
+  font-size: 2rem;
+  color: #005a8e;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #005a8e;
+  display: inline-block;
 }
 .card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
-    transition: transform 0.2s;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  transition: transform 0.2s;
 }
 .card:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 .card h3 {
-    color: #005a8e;
-    font-size: 1.5rem;
-    margin-top: 0;
+  color: #005a8e;
+  font-size: 1.5rem;
+  margin-top: 0;
 }
 .card p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* Estilo do Footer */
 footer {
-    background-color: #333;
-    color: #f4f4f9;
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #333;
+  color: #f4f4f9;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 footer p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 footer a {
-    color: #aad4f3;
-    text-decoration: none;
-    font-weight: bold;
+  color: #aad4f3;
+  text-decoration: none;
+  font-weight: bold;
 }
 footer a:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
