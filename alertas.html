@@ -3,38 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/alertas.css">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./alertas.css" />
+    <link rel="icon" href="./assets/logo.png" type="image/x-icon" />
     <title>Alertas</title>
   </head>
   <body>
-    <img class="logo" src="./assets/logo.png" alt="" />
+    <header>
+      <img class="logo" src="./assets/logo.png" alt="" />
       <nav class="menu">
-        <a href="">Início</a>
-        <a href="">Alertas</a>
+        <a href="./index.html">Início</a>
+        <a href="./alertas.html">Alertas</a>
         <a href="./lugares-afetados.html">Lugares afetados</a>
-        <a href="">Dicas</a>
+        <a href="./dicas.html">Dicas</a>
       </nav>
-      <main>
-      <div> <h1> Alertas de enchentes</h1>
-          <h2>Locais com relatos de enchentes</h2>
-        <div class="container">
-          <section class="galery">
-            <div class="fotos">
-              <img src="./resized_image_1.jpg" alt="Foto 1">
-              <img src="./resized_image_2.jpg" alt="Foto 2">
-              <img src="./resized_image_3.jpg" alt="Foto 3">
-              <img src="./resized_image_4.jpg" alt="Foto 4">
-              <img src="./resized_image_1.jpg" alt="Foto 1">
-
-            </div>
-        
-
-          </section>
-        </div>
-
+      <div class="doacao-button">
+        <a href="#" onclick="openModal()">Faça sua doação!</a>
       </div>
-      
-      </main>
-     
+    </header>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Ajude as vítimas de enchentes</h2>
+        <p>
+          Sua doação pode fazer a diferença para muitas famílias afetadas pelas
+          enchentes.
+        </p>
+        <p><strong>Chave PIX:</strong> 123.456.789-00</p>
+        <p>Agradecemos imensamente pela sua contribuição!</p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
