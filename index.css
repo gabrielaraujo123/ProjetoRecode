@@ -315,6 +315,7 @@ header {
   align-items: center;
   color: #063e48;
   gap: 0.5rem;
+  text-align: center;
 }
 .abrigo-article h1 {
   font-family: "montserrat", sans-serif;
