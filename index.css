@@ -17,9 +17,9 @@ header {
   text-decoration: none;
 }
 .doacao-button a {
-  /*text-decoration: none;*/
   position: relative;
-  padding: 2.5rem 1rem;
+  padding: 1.5rem 1rem;
+  line-height: 2.5rem;
   color: #fff;
   background-color: #0cc0df;
   text-decoration: none;
