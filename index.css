@@ -19,7 +19,7 @@ header {
 .doacao-button a {
   /*text-decoration: none;*/
   position: relative;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   color: #fff;
   background-color: #0cc0df;
   text-decoration: none;
@@ -28,9 +28,9 @@ header {
   overflow: hidden;
   transition: color 0.3s ease;
 }
-/* Estilos para o modal */
+
 .modal {
-  display: none; /* Esconde o modal por padrão */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -50,7 +50,7 @@ header {
   text-align: center;
   transform: scale(0.5);
   opacity: 0;
-  transition: all 0.3s ease; /* Animação suave */
+  transition: all 0.3s ease;
 }
 
 .modal-content h2 {
@@ -69,8 +69,7 @@ header {
   cursor: pointer;
 }
 
-/* Quando o modal estiver ativo */
 .modal.show .modal-content {
-  transform: scale(1); /* Aumenta para o tamanho normal */
+  transform: scale(1);
   opacity: 1;
 }
