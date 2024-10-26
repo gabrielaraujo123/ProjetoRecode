@@ -21,8 +21,26 @@ header {
   display: flex;
   gap: 1rem;
 }
+.menu li {
+  position: relative;
+}
+.menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #0cc0df;
+  transition: width 0.3s ease;
+}
+.menu li:hover::after {
+  width: 100%;
+}
 .menu a {
   text-decoration: none;
+  color: #063e48;
+  font-family: "montserrat", sans-serif;
 }
 .doacao-button a {
   position: relative;
@@ -35,6 +53,7 @@ header {
   border-radius: 20px;
   overflow: hidden;
   transition: color 0.4s ease;
+  font-family: "Roboto mono", monospace;
 }
 .doacao-button a:hover {
   background-color: #098ca3;
@@ -87,6 +106,7 @@ header {
     margin-top: -1rem;
     top: 0;
     left: 45%;
+    font-size: 0.8rem;
   }
 }
 .hamburger.open span:nth-child(1) {
@@ -162,6 +182,12 @@ header {
 }
 .article-start h1 {
   font-size: 2rem;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+}
+.article-start h2 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
 }
 .article-start img {
   width: 40rem;
@@ -179,6 +205,7 @@ header {
   color: #fff;
   border-radius: 10px;
   transition: 0.4s ease;
+  font-family: "Roboto mono", monospace;
 }
 .container-start .relatar-button:hover {
   background: rgb(26, 145, 181);
@@ -218,7 +245,8 @@ header {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.4s ease;
+  font-family: "Roboto mono", monospace;
 }
 .submit-button:hover {
   background-color: #09a3c5;
@@ -255,6 +283,12 @@ header {
   opacity: 1;
 }
 @media (max-width: 768px) {
+  .article-start {
+    margin-top: 1rem;
+  }
+  .article-start h1 {
+    font-size: 1.8rem;
+  }
   .start-form textarea {
     min-height: 150px;
   }
