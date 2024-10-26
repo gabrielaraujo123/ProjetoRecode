@@ -236,6 +236,25 @@ header {
   resize: vertical;
   min-height: 100px;
 }
+.image-upload-input {
+  display: flex;
+  font-family: "montserrat", sans-serif;
+  cursor: pointer;
+}
+.image-upload-label {
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+.image-upload-label:hover {
+  background-color: #0056b3;
+}
 .submit-button {
   margin-top: 0.5rem;
   padding: 0.75rem;

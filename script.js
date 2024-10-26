@@ -36,3 +36,35 @@ function toggleMenu() {
   menu.classList.toggle("show");
   hamburger.classList.toggle("open");
 }
+
+function showSuccessMessage() {
+  const responseMessage = document.getElementById("responseMessage");
+  responseMessage.style.display = "block";
+  responseMessage.innerText = "Relato feito com sucesso!";
+  setTimeout(() => {
+    responseMessage.style.display = "none";
+  }, 3000);
+}
+
+function validateForm(event) {
+  event.preventDefault();
+
+  const contactInput = document.getElementById("contact");
+  const contactValue = contactInput.value;
+  const onlyNumbers = /^\d+$/;
+
+  if (!onlyNumbers.test(contactValue)) {
+    alert("Por favor, insira apenas números no campo de telefone.");
+    return;
+  }
+
+  alert("Relato feito com sucesso!");
+  resetFormFields();
+  closeReportModal();
+}
+
+function resetFormFields() {
+  document.getElementById("reportForm").reset();
+}
+
+document.getElementById("reportForm").addEventListener("submit", validateForm);

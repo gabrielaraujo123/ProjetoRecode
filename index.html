@@ -82,12 +82,28 @@
               name="info"
               placeholder="Informações Adicionais"
             ></textarea>
+            <label for="image-upload" class="image-upload-label">
+              Imagem para verificar nível de enchente
+            </label>
+            <input
+              type="file"
+              id="image-upload"
+              name="image-upload"
+              accept="image/*"
+              class="image-upload-input"
+            />
           </div>
           <button class="submit-button" type="submit">Enviar</button>
+          <div
+            id="responseMessage"
+            style="display: none; color: green; font-weight: bold"
+          >
+            Relato feito com sucesso!
+          </div>
         </form>
-        <div id="responseMessage" style="display: none"></div>
       </div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
