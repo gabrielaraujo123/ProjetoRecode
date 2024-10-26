@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.logo {
+  width: 9rem;
+}
+.menu {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+.menu a {
+  text-decoration: none;
+}
+.doacao-button a {
+  text-decoration: none;
+}
