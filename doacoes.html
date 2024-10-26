@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="./index.css" />
     <title>Doações</title>
     <style>
-      /* Estilos para o botão desabilitado */
       .donate-btn:disabled {
-        background-color: #ccc; /* Cor cinza */
-        cursor: not-allowed; /* Muda o cursor para indicar que está desabilitado */
+        background-color: #ccc;
+        cursor: not-allowed;
       }
-      /* Estilo para a mensagem de erro */
       .error-message {
-        color: red; /* Cor da mensagem de erro */
-        margin-top: 10px; /* Espaçamento acima da mensagem */
+        color: red;
+        margin-top: 10px;
       }
     </style>
   </head>
@@ -43,7 +41,6 @@
           <button class="donate-btn" id="donateBtn" onclick="donate()" disabled>
             Doar
           </button>
-          <!-- Div onde a mensagem de agradecimento ou erro será exibida -->
           <div id="thankYouMessage" class="error-message"></div>
         </div>
       </div>
@@ -58,13 +55,13 @@
 
       function closeModal() {
         document.getElementById("donationModal").style.display = "none";
-        document.getElementById("thankYouMessage").innerHTML = ""; // Limpa a mensagem ao fechar
+        document.getElementById("thankYouMessage").innerHTML = "";
         selectedAmount = null;
-        // Redefine o conteúdo para o estado inicial
+
         document.querySelectorAll(".amount-btns button").forEach((btn) => {
           btn.classList.remove("selected");
         });
-        document.getElementById("donateBtn").disabled = true; // Desabilita o botão ao fechar
+        document.getElementById("donateBtn").disabled = true;
       }
 
       function selectAmount(button, amount) {
@@ -75,21 +72,16 @@
         });
         button.classList.add("selected");
         button.classList.remove("not-selected");
-        document.getElementById("donateBtn").disabled = false; // Habilita o botão de doar
-        document.getElementById("thankYouMessage").innerHTML = ""; // Limpa a mensagem de erro
+        document.getElementById("donateBtn").disabled = false;
+        document.getElementById("thankYouMessage").innerHTML = "";
       }
 
       function donate() {
         if (selectedAmount) {
-          // Exibe a mensagem de agradecimento abaixo dos botões de doação
           document.getElementById("thankYouMessage").innerHTML = `
           <p>Agradecemos sua doação de R$${selectedAmount}!</p>
           <p>Sua contribuição faz a diferença para quem precisa.</p>
         `;
-        } else {
-          // Se nenhum valor for selecionado, mostra a mensagem de erro
-          document.getElementById("thankYouMessage").innerHTML =
-            "Você precisa adicionar algum valor para a doação.";
         }
       }
     </script>
