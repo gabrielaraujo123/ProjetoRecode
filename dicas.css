@@ -38,6 +38,9 @@ body {
 .content-section li {
   margin-left: 10px;
 }
+ {
+  margin: 12px;
+}
 .cat-btn {
   padding: 12px 24px;
   border: none;
