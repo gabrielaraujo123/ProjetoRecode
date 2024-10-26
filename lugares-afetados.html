@@ -7,26 +7,39 @@
     <link rel="stylesheet" href="./index.css" />
     <title>Enchentes no Rio Grande do Sul - 2024</title>
   </head>
-  <header>
-    <img class="logo" src="./assets/logo.png" alt="" />
-    <nav class="menu">
-      <a href="./index.html">Início</a>
-      <a href="./alertas.html">Alertas</a>
-      <a href="./lugares-afetados.html">Lugares afetados</a>
-      <a href="./dicas.html">Dicas</a>
-    </nav>
-    <div class="doacao-button">
-      <a href="./doacoes.html">Faça sua doação!</a>
-    </div>
-  </header>
   <body>
+    <header>
+      <img class="logo" src="./assets/logo.png" alt="" />
+      <nav class="menu">
+        <a href="./index.html">Início</a>
+        <a href="./alertas.html">Alertas</a>
+        <a href="./lugares-afetados.html">Lugares afetados</a>
+        <a href="./dicas.html">Dicas</a>
+      </nav>
+      <div class="doacao-button">
+        <a href="#" onclick="openModal()">Faça sua doação!</a>
+      </div>
+    </header>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Ajude as vítimas de enchentes</h2>
+        <p>
+          Sua doação pode fazer a diferença para muitas famílias afetadas pelas
+          enchentes.
+        </p>
+        <p><strong>Chave PIX:</strong> 123.456.789-00</p>
+        <p>Agradecemos imensamente pela sua contribuição!</p>
+      </div>
+    </div>
+
     <h1>Enchentes no Rio Grande do Sul - 2024</h1>
     <p>
       Informações detalhadas sobre os locais afetados, as consequências e os
       riscos para as áreas próximas.
     </p>
     <div class="container">
-      <!-- Seção: Lugares Afetados -->
       <div class="section" id="lugares-afetados">
         <h2>Lugares Afetados por Completo</h2>
         <div class="card">
@@ -44,7 +57,6 @@
         </div>
       </div>
 
-      <!-- Seção: Lugares em Risco -->
       <div class="section" id="lugares-em-risco">
         <h2>Lugares em Risco de Enchentes Futuros</h2>
         <div class="card">
@@ -64,7 +76,6 @@
         </div>
       </div>
 
-      <!-- Seção: Como Ajudar -->
       <div class="section" id="ajuda">
         <h2>Como Ajudar</h2>
         <div class="card">
@@ -91,5 +102,6 @@
       <p>&copy; 2024 Enchentes RS - Todos os direitos reservados.</p>
       <p><a href="#lugares-afetados">Início</a> | <a href="#ajuda">Ajuda</a></p>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

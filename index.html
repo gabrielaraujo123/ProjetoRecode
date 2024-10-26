@@ -17,11 +17,26 @@
         <a href="./dicas.html">Dicas</a>
       </nav>
       <div class="doacao-button">
-        <a href="./doacoes.html">Faça sua doação!</a>
+        <a href="#" onclick="openModal()">Faça sua doação!</a>
       </div>
     </header>
     <main>
       <div></div>
     </main>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Ajude as vítimas de enchentes</h2>
+        <p>
+          Sua doação pode fazer a diferença para muitas famílias afetadas pelas
+          enchentes.
+        </p>
+        <p><strong>Chave PIX:</strong> doacao@gmail.com</p>
+        <p>Agradecemos imensamente pela sua contribuição!</p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
