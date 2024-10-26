@@ -24,9 +24,9 @@
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <h2>Ajude quem perdeu tudo com as enchentes</h2>
         <div class="amount-btns">
-          <button onclick="selectAmount(this, 10)">R$10</button>
-          <button onclick="selectAmount(this, 20)">R$20</button>
-          <button onclick="selectAmount(this, 30)">R$30</button>
+          <button onclick="selectAmount(10)">R$10</button>
+          <button onclick="selectAmount(20)">R$20</button>
+          <button onclick="selectAmount(30)">R$30</button>
         </div>
         <button class="donate-btn" onclick="donate()">Doar</button>
       </div>
@@ -43,20 +43,15 @@
         document.getElementById("donationModal").classList.remove("show");
       }
 
-      function selectAmount(button, amount) {
+      function selectAmount(amount) {
         selectedAmount = amount;
-        document.querySelectorAll(".amount-btns button").forEach((btn) => {
-          btn.classList.remove("selected");
-          btn.classList.add("not-selected");
-        });
-        button.classList.add("selected");
-        button.classList.remove("not-selected");
+        alert(`Valor selecionado: R$${amount}`);
       }
 
       function donate() {
         if (selectedAmount) {
+          alert(`Obrigado por sua doação de R$${selectedAmount}!`);
           closeModal();
-          console.log(`Doação confirmada: R$${selectedAmount}`);
         } else {
           alert("Por favor, selecione um valor para doar.");
         }
