@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="./doacoes.css" />
     <link rel="stylesheet" href="./index.css" />
     <title>Doações</title>
+    <style>
+      /* Estilos para o botão desabilitado */
+      .donate-btn:disabled {
+        background-color: #ccc; /* Cor cinza */
+        cursor: not-allowed; /* Muda o cursor para indicar que está desabilitado */
+      }
+      /* Estilo para a mensagem de erro */
+      .error-message {
+        color: red; /* Cor da mensagem de erro */
+        margin-top: 10px; /* Espaçamento acima da mensagem */
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -28,9 +40,11 @@
             <button onclick="selectAmount(this, 20)">R$20</button>
             <button onclick="selectAmount(this, 30)">R$30</button>
           </div>
-          <button class="donate-btn" onclick="donate()">Doar</button>
-          <!-- Div onde a mensagem de agradecimento será exibida -->
-          <div id="thankYouMessage"></div>
+          <button class="donate-btn" id="donateBtn" onclick="donate()" disabled>
+            Doar
+          </button>
+          <!-- Div onde a mensagem de agradecimento ou erro será exibida -->
+          <div id="thankYouMessage" class="error-message"></div>
         </div>
       </div>
     </div>
@@ -50,6 +64,7 @@
         document.querySelectorAll(".amount-btns button").forEach((btn) => {
           btn.classList.remove("selected");
         });
+        document.getElementById("donateBtn").disabled = true; // Desabilita o botão ao fechar
       }
 
       function selectAmount(button, amount) {
@@ -60,6 +75,8 @@
         });
         button.classList.add("selected");
         button.classList.remove("not-selected");
+        document.getElementById("donateBtn").disabled = false; // Habilita o botão de doar
+        document.getElementById("thankYouMessage").innerHTML = ""; // Limpa a mensagem de erro
       }
 
       function donate() {
@@ -69,6 +86,10 @@
           <p>Agradecemos sua doação de R$${selectedAmount}!</p>
           <p>Sua contribuição faz a diferença para quem precisa.</p>
         `;
+        } else {
+          // Se nenhum valor for selecionado, mostra a mensagem de erro
+          document.getElementById("thankYouMessage").innerHTML =
+            "Você precisa adicionar algum valor para a doação.";
         }
       }
     </script>
