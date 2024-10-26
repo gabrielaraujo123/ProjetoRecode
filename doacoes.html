@@ -31,6 +31,8 @@
             <button onclick="selectAmount(this, 30)">R$30</button>
           </div>
           <button class="donate-btn" onclick="donate()">Doar</button>
+          <!-- Div onde a mensagem de agradecimento será exibida -->
+          <div id="thankYouMessage"></div>
         </div>
       </div>
     </div>
@@ -44,16 +46,12 @@
 
       function closeModal() {
         document.getElementById("donationModal").style.display = "none";
-        document.getElementById("modal-content").innerHTML = `
-        <h2>Ajude quem perdeu tudo com as enchentes</h2>
-        <div class="amount-btns">
-          <button onclick="selectAmount(this, 10)">R$10</button>
-          <button onclick="selectAmount(this, 20)">R$20</button>
-          <button onclick="selectAmount(this, 30)">R$30</button>
-        </div>
-        <button class="donate-btn" onclick="donate()">Doar</button>
-      `;
+        document.getElementById("thankYouMessage").innerHTML = ""; // Limpa a mensagem ao fechar
         selectedAmount = null;
+        // Redefine o conteúdo para o estado inicial
+        document.querySelectorAll(".amount-btns button").forEach((btn) => {
+          btn.classList.remove("selected");
+        });
       }
 
       function selectAmount(button, amount) {
@@ -68,10 +66,10 @@
 
       function donate() {
         if (selectedAmount) {
-          document.getElementById("modal-content").innerHTML = `
-          <h2>Agradecemos sua doação de R$${selectedAmount}!</h2>
+          // Exibe a mensagem de agradecimento abaixo dos botões de doação
+          document.getElementById("thankYouMessage").innerHTML = `
+          <p>Agradecemos sua doação de R$${selectedAmount}!</p>
           <p>Sua contribuição faz a diferença para quem precisa.</p>
-          <button class="donate-btn" onclick="closeModal()">Fechar</button>
         `;
         }
       }
