@@ -1,117 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./lugares-afetados.css" />
-  <link rel="stylesheet" href="./index.css" />
-  <title>Enchentes no Rio Grande do Sul - 2024</title>
-</head>
-<body>
-  <header>
-    <img class="logo" src="./assets/logo.png" alt="" />
-    <nav>
-      <ul class="menu">
-        <li><a href="./index.html">Início</a></li>
-        <li><a href="./alertas.html">Alertas</a></li>
-        <li><a href="./lugares-afetados.html">Lugares afetados</a></li>
-        <li><a href="./dicas.html">Dicas</a></li>
-      </ul>
-    </nav>
-    <div class="doacao-button">
-      <a href="#" onclick="openModal()">Faça sua doação!</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./lugares-afetados.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Enchentes no Rio Grande do Sul - 2024</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./assets/logo.png" alt="" />
+      <nav>
+        <ul class="menu">
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="./alertas.html">Alertas</a></li>
+          <li><a href="./lugares-afetados.html">Lugares afetados</a></li>
+          <li><a href="./dicas.html">Dicas</a></li>
+        </ul>
+      </nav>
+      <div class="doacao-button">
+        <a href="#" onclick="openModal()">Faça sua doação!</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <span class="direction">Início > Lugares afetados</span>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Ajude as vítimas de enchentes</h2>
+        <p>
+          Sua doação pode fazer a diferença para muitas famílias afetadas pelas
+          enchentes.
+        </p>
+        <p><strong>Chave PIX:</strong> 123.456.789-00</p>
+        <p>Agradecemos imensamente pela sua contribuição!</p>
+      </div>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
 
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Ajude as vítimas de enchentes</h2>
+    <main class="container">
+      <h1>Veja os lugares afetados pelas enchentes</h1>
       <p>
-        Sua doação pode fazer a diferença para muitas famílias afetadas pelas enchentes.
+        Informações detalhadas sobre os locais afetados, as consequências e os
+        riscos para as áreas próximas.
       </p>
-      <p><strong>Chave PIX:</strong> 123.456.789-00</p>
-      <p>Agradecemos imensamente pela sua contribuição!</p>
-    </div>
-  </div>
 
-  <main class="container">
-    <h1>Veja os lugares afetados pelas enchentes</h1>
-    <p>
-      Informações detalhadas sobre os locais afetados, as consequências e os riscos para as áreas próximas.
-    </p>
+      <section class="section" id="lugares-afetados">
+        <h2>Lugares Totalmente Afetados</h2>
+        <div class="card">
+          <h3>Vale do Taquari</h3>
+          <img
+            src="./vale-do-taquari.jpg"
+            alt="Vale do Taquari"
+            class="card-img"
+          />
+        </div>
+        <div class="card">
+          <h3>Vale do Caí e Rio Pardo</h3>
+          <img
+            src="./vale-do-rio-caí.jpg"
+            alt="Vale do Rio Caí"
+            class="card-img"
+          />
+          <img
+            src="./vale-do-rio-pardo.jpeg"
+            alt="Vale do Rio Pardo"
+            class="card-img"
+          />
+        </div>
+        <div class="card">
+          <h3>Porto Alegre</h3>
+          <img src="./Porto-Alegre.jpg" alt="Porto Alegre" class="card-img" />
+        </div>
+      </section>
 
-    <section class="section" id="lugares-afetados">
-      <h2>Lugares Totalmente Afetados</h2>
-      <div class="card">
-        <h3>Vale do Taquari</h3>
-        <img src="./vale-do-taquari.jpg" alt="Vale do Taquari" class="card-img">
-      </div>
-      <div class="card">
-        <h3>Vale do Caí e Rio Pardo</h3>
-        <img src="./vale-do-rio-caí.jpg" alt="Vale do Rio Caí" class="card-img">
-        <img src="./vale-do-rio-pardo.jpeg" alt="Vale do Rio Pardo" class="card-img">
-      </div>
-      <div class="card">
-        <h3>Porto Alegre</h3>
-        <img src="./Porto-Alegre.jpg" alt="Porto Alegre" class="card-img">
-      </div>
-    </section>
+      <section class="section" id="lugares-em-risco">
+        <h2>Lugares em Risco de Enchentes</h2>
+        <div class="card">
+          <h3>Região Metropolitana de Porto Alegre</h3>
+          <img src="./metropole-porto-alegre-foto.jpg" alt="Metropole" />
+        </div>
+        <div class="card">
+          <h3>Vale dos Sinos</h3>
+          <img src="./Vale dos Sinos.jpeg" alt="Vale dos Sinos" />
+        </div>
+      </section>
 
-    <section class="section" id="lugares-em-risco">
-      <h2>Lugares em Risco de Enchentes</h2>
-      <div class="card">
-        <h3>Região Metropolitana de Porto Alegre</h3>
-        <img src="./metropole-porto-alegre-foto.jpg" alt="Metropole">
+      <section class="section" id="ajuda">
+        <h2>Como Ajudar</h2>
+        <div class="card">
+          <h3>Doações e Voluntariado</h3>
+          <p>
+            As famílias afetadas estão recebendo doações de alimentos, roupas e
+            produtos de higiene. Para doar ou se voluntariar, entre em contato
+            com as autoridades locais ou organizações de ajuda humanitária.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Auxílio Financeiro</h3>
+          <p>
+            O Governo Federal disponibilizou auxílio emergencial para famílias
+            desalojadas. Saiba mais no site oficial sobre como se cadastrar para
+            receber o benefício.
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Lugares Afetados</h3>
+          <a href="#lugares-afetados" class="footer-link">Vale do Taquari</a>
+          <a href="#lugares-afetados" class="footer-link"
+            >Vale do Caí e Rio Pardo</a
+          >
+          <a href="#lugares-afetados" class="footer-link">Porto Alegre</a>
+        </div>
+        <div class="footer-section">
+          <h3>Lugares em Risco</h3>
+          <a href="#lugares-em-risco" class="footer-link"
+            >Região Metropolitana de Porto Alegre</a
+          >
+          <a href="#lugares-em-risco" class="footer-link">Vale dos Sinos</a>
+        </div>
+        <div class="footer-section">
+          <h3>Como Ajudar</h3>
+          <a href="#ajuda" class="footer-link">Doações e Voluntariado</a>
+          <a href="#ajuda" class="footer-link">Auxílio Financeiro</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Vale dos Sinos</h3>
-        <img src="./Vale dos Sinos.jpeg" alt="Vale dos Sinos">
-      </div>
-    </section>
-
-    <section class="section" id="ajuda">
-      <h2>Como Ajudar</h2>
-      <div class="card">
-        <h3>Doações e Voluntariado</h3>
-        <p>
-          As famílias afetadas estão recebendo doações de alimentos, roupas e produtos de higiene.
-          Para doar ou se voluntariar, entre em contato com as autoridades locais ou organizações de ajuda humanitária.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Auxílio Financeiro</h3>
-        <p>
-          O Governo Federal disponibilizou auxílio emergencial para famílias desalojadas. Saiba mais no site oficial sobre como se cadastrar para receber o benefício.
-        </p>
-      </div>
-    </section>
-  </main>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Lugares Afetados</h3>
-        <a href="#lugares-afetados" class="footer-link">Vale do Taquari</a>
-        <a href="#lugares-afetados" class="footer-link">Vale do Caí e Rio Pardo</a>
-        <a href="#lugares-afetados" class="footer-link">Porto Alegre</a>
-      </div>
-      <div class="footer-section">
-        <h3>Lugares em Risco</h3>
-        <a href="#lugares-em-risco" class="footer-link">Região Metropolitana de Porto Alegre</a>
-        <a href="#lugares-em-risco" class="footer-link">Vale dos Sinos</a>
-      </div>
-      <div class="footer-section">
-        <h3>Como Ajudar</h3>
-        <a href="#ajuda" class="footer-link">Doações e Voluntariado</a>
-        <a href="#ajuda" class="footer-link">Auxílio Financeiro</a>
-      </div>
-    </div>
       <p>&copy; 2024 Enchentes RS - Todos os direitos reservados.</p>
       <p><a href="#lugares-afetados">Início</a> | <a href="#ajuda">Ajuda</a></p>
     </footer>
