@@ -4,16 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/alertas.css">
+    <link rel="stylesheet" href="/index.css">
     <title>Alertas</title>
   </head>
   <body>
-    <img class="logo" src="./assets/logo.png" alt="" />
-      <nav class="menu">
-        <a href="">Início</a>
-        <a href="">Alertas</a>
-        <a href="./lugares-afetados.html">Lugares afetados</a>
-        <a href="">Dicas</a>
-      </nav>
+    <body>
+      <header>
+        <img class="logo" src="./assets/logo.png" alt="" />
+        <nav class="menu">
+          <a href="./index.html">Início</a>
+          <a href="./alertas.html">Alertas</a>
+          <a href="./lugares-afetados.html">Lugares afetados</a>
+          <a href="./dicas.html">Dicas</a>
+        </nav>
+        <div class="doacao-button">
+          <a href="#" onclick="openModal()">Faça sua doação!</a>
+        </div>
+      </header>
+  
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Ajude as vítimas de enchentes</h2>
+          <p>
+            Sua doação pode fazer a diferença para muitas famílias afetadas pelas
+            enchentes.
+          </p>
+          <p><strong>Chave PIX:</strong> 123.456.789-00</p>
+          <p>Agradecemos imensamente pela sua contribuição!</p>
+        </div>
+      </div>
       <main>
         <div> <h1> Alertas de enchentes</h1>
           <h2>Locais com relatos de enchentes</h2>
