@@ -22,6 +22,7 @@
 
     <div class="modal-overlay" id="donationModal">
       <div class="modal">
+        <!-- Botão X para fechar a modal -->
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <div id="modal-content">
           <h2>Ajude quem perdeu tudo com as enchentes</h2>
@@ -44,6 +45,7 @@
 
       function closeModal() {
         document.getElementById("donationModal").classList.remove("show");
+        // Redefine o conteúdo da modal após fechá-la
         document.getElementById("modal-content").innerHTML = `
         <h2>Ajude quem perdeu tudo com as enchentes</h2>
         <div class="amount-btns">
