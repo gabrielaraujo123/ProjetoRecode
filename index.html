@@ -11,10 +11,18 @@
   <body>
     <header>
       <img class="logo" src="./assets/logo.png" alt="" />
-      <nav class="menu">
-        <a href="./alertas.html">Alertas</a>
-        <a href="./lugares-afetados.html">Lugares afetados</a>
-        <a href="./dicas.html">Dicas</a>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="./alertas.html">Alertas</a>
+          </li>
+          <li>
+            <a href="./lugares-afetados.html">Lugares afetados</a>
+          </li>
+          <li>
+            <a href="./dicas.html">Dicas</a>
+          </li>
+        </ul>
       </nav>
       <div class="doacao-button">
         <a href="#" onclick="openModal()">Faça sua doação!</a>
@@ -23,15 +31,17 @@
     <main>
       <div class="container-start">
         <article class="article-start">
-          <h1></h1>
-          <h2></h2>
+          <img src="./assets/start-img.png" alt="" />
+          <h1>Enchentes acontecendo?</h1>
+          <h2>Relate agora mesmo!</h2>
+          <img class="seta-icon" src="./assets/seta-start.png" alt="" />
         </article>
+        <button onclick="openReportModal()">Relatar Enchentes</button>
       </div>
     </main>
-
-    <div class="modal" id="modal">
+    <div class="modal" id="donationModal">
       <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close" onclick="closeDonationModal()">&times;</span>
         <h2>Ajude as vítimas de enchentes</h2>
         <p>
           Sua doação pode fazer a diferença para muitas famílias afetadas pelas
@@ -41,7 +51,37 @@
         <p>Agradecemos imensamente pela sua contribuição!</p>
       </div>
     </div>
-
+    <div class="modal" id="reportModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeReportModal()">&times;</span>
+        <h2>Relatar Enchente</h2>
+        <form id="reportForm">
+          <div class="start-form">
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Por favor, digite o local da enchente"
+              required
+            />
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="Telefone para Contato"
+              required
+            />
+            <textarea
+              id="info"
+              name="info"
+              placeholder="Informações Adicionais"
+            ></textarea>
+          </div>
+          <button class="submit-button" type="submit">Enviar</button>
+        </form>
+        <div id="responseMessage" style="display: none"></div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
