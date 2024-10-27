@@ -50,26 +50,13 @@ function validateForm(event) {
   event.preventDefault();
 
   const contactInput = document.getElementById("contact");
-  const contactValue = contactInput.value;
+  const contactValue = contactInput.value.replace(/\D/g, "");
   const onlyNumbers = /^\d+$/;
 
   if (!onlyNumbers.test(contactValue)) {
     alert("Por favor, insira apenas números no campo de telefone.");
     return;
   }
-
-  function formatPhoneInput(input) {
-    let value = input.value.replace(/\D/g, "");
-    if (value.length > 10) value = value.slice(0, 10);
-
-    // Aplica a formatação (99) 9999-9999
-    const formattedValue = value.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
-    input.value = formattedValue;
-  }
-
-  document.getElementById("contact").addEventListener("input", function () {
-    formatPhoneInput(this);
-  });
 
   alert("Relato feito com sucesso!");
   resetFormFields();
@@ -79,5 +66,35 @@ function validateForm(event) {
 function resetFormFields() {
   document.getElementById("reportForm").reset();
 }
+
+function formatPhoneInput(input) {
+  let value = input.value.replace(/\D/g, "");
+
+  // Limita o valor a 10 dígitos
+  if (value.length > 10) value = value.slice(0, 10);
+
+  if (value.length > 6) {
+    input.value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(
+      6
+    )}`;
+  } else if (value.length > 2) {
+    input.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+  } else {
+    input.value = value;
+  }
+}
+
+document.getElementById("contact").addEventListener("input", function () {
+  formatPhoneInput(this);
+});
+
+function updateCharacterCount() {
+  const maxChars = 300;
+  const infoField = document.getElementById("info");
+  const charCountDisplay = document.getElementById("charCount");
+  const remainingChars = maxChars - infoField.value.length;
+  charCountDisplay.textContent = `${remainingChars} caracteres restantes`;
+}
+updateCharacterCount();
 
 document.getElementById("reportForm").addEventListener("submit", validateForm);

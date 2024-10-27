@@ -190,7 +190,10 @@
               id="info"
               name="info"
               placeholder="Informações Adicionais"
+              maxlength="300"
+              oninput="updateCharacterCount()"
             ></textarea>
+            <div id="charCount">300 caracteres restantes</div>
             <label for="image-upload" class="image-upload-label">
               Imagem para verificar nível de enchente
             </label>
