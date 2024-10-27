@@ -12,6 +12,7 @@
       <img class="logo" src="./assets/logo.png" alt="Logo" />
       <nav>
         <ul class="menu">
+          <li><a href="./index.html">Início</a></li>
           <li><a href="./alertas.html">Alertas</a></li>
           <li><a href="./lugares-afetados.html">Lugares afetados</a></li>
           <li><a href="./dicas.html">Dicas</a></li>
@@ -46,7 +47,7 @@
           <span class="info-close" onclick="closeCardModal()">&times;</span>
           <h2 id="modal-title"></h2>
           <img id="modal-image" class="modal-img" alt="Imagem do Local" />
-          <p id="modal-description"></p>
+          <p class="info-p" id="modal-description"></p>
           <p class="modal-date" id="modal-date"></p>
         </div>
       </div>
@@ -61,43 +62,27 @@
           />
         </div>
         <div class="card" onclick="openCardModal('vale-cai-pardo')">
-          <h3>Vale do Caí e Rio Pardo</h3>
+          <h3>Vale do Caí</h3>
           <img
             src="./assets/vale-do-rio-caí.jpg"
             alt="Vale do Rio Caí"
             class="card-img"
           />
+        </div>
+        <div class="card" onclick="openCardModal('vale-rio-pardo')">
+          <h3>Vale do Rio Pardo</h3>
           <img
             src="./assets/vale-do-rio-pardo.jpeg"
             alt="Vale do Rio Pardo"
             class="card-img"
           />
         </div>
+
         <div class="card" onclick="openCardModal('porto-alegre')">
           <h3>Porto Alegre</h3>
           <img
             src="./assets/Porto-Alegre.jpg"
             alt="Porto Alegre"
-            class="card-img"
-          />
-        </div>
-      </section>
-
-      <section class="section" id="lugares-em-risco">
-        <h2>Lugares em Risco de Enchentes</h2>
-        <div class="card" onclick="openCardModal('regiao-metropolitana')">
-          <h3>Região Metropolitana de Porto Alegre</h3>
-          <img
-            src="./assets/metropole-porto-alegre-foto.jpg"
-            alt="Metropole"
-            class="card-img"
-          />
-        </div>
-        <div class="card" onclick="openCardModal('vale-sinos')">
-          <h3>Vale dos Sinos</h3>
-          <img
-            src="./assets/Vale dos Sinos.jpeg"
-            alt="Vale dos Sinos"
             class="card-img"
           />
         </div>
