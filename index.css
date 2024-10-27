@@ -105,7 +105,7 @@ header {
     padding-top: 2rem;
     margin-top: -1rem;
     top: 0;
-    left: 45%;
+    left: 42%;
     font-size: 0.8rem;
   }
 }
@@ -220,12 +220,17 @@ header {
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   gap: 1rem;
-  max-width: 600px;
+
   margin: auto;
 }
-.start-form input[type="text"],
-.start-form input[type="tel"],
-.start-form textarea {
+.start-form input[type="text"] {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.start-form input[type="tel"] {
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -235,7 +240,7 @@ header {
 .start-form textarea {
   grid-column: 1 / -1;
   resize: vertical;
-  min-height: 100px;
+  min-height: 150px;
 }
 .image-upload-input {
   display: flex;
@@ -267,7 +272,7 @@ header {
   background-color: #09a3c5;
 }
 #reportModal {
-  display: none; /* Inicia oculto */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -287,10 +292,10 @@ header {
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  max-width: 500px;
-  width: 90%;
+
+  width: 50%;
   transform: scale(0.8);
-  animation: fadeIn 0.4s forwards ease-out; /* Aplica a animação */
+  animation: fadeIn 0.4s forwards ease-out;
 }
 .report-modal-content h2 {
   font-family: "montserrat", sans-serif;
@@ -482,6 +487,7 @@ header {
 }
 @media (max-width: 768px) {
   .article-start {
+    text-align: center;
     margin-top: -5rem;
   }
   .article-start h1 {
