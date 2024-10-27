@@ -21,8 +21,26 @@ header {
   display: flex;
   gap: 1rem;
 }
+.menu li {
+  position: relative;
+}
+.menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #0cc0df;
+  transition: width 0.3s ease;
+}
+.menu li:hover::after {
+  width: 100%;
+}
 .menu a {
   text-decoration: none;
+  color: #063e48;
+  font-family: "montserrat", sans-serif;
 }
 .doacao-button a {
   position: relative;
@@ -35,6 +53,7 @@ header {
   border-radius: 20px;
   overflow: hidden;
   transition: color 0.4s ease;
+  font-family: "Roboto mono", monospace;
 }
 .doacao-button a:hover {
   background-color: #098ca3;
@@ -86,7 +105,8 @@ header {
     padding-top: 2rem;
     margin-top: -1rem;
     top: 0;
-    left: 50%;
+    left: 45%;
+    font-size: 0.8rem;
   }
 }
 .hamburger.open span:nth-child(1) {
@@ -162,6 +182,12 @@ header {
 }
 .article-start h1 {
   font-size: 2rem;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+}
+.article-start h2 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
 }
 .article-start img {
   width: 40rem;
@@ -179,6 +205,7 @@ header {
   color: #fff;
   border-radius: 10px;
   transition: 0.4s ease;
+  font-family: "Roboto mono", monospace;
 }
 .container-start .relatar-button:hover {
   background: rgb(26, 145, 181);
@@ -209,6 +236,20 @@ header {
   resize: vertical;
   min-height: 100px;
 }
+.image-upload-input {
+  display: flex;
+  font-family: "montserrat", sans-serif;
+  cursor: pointer;
+}
+.image-upload-label {
+  color: #000000;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
 .submit-button {
   margin-top: 0.5rem;
   padding: 0.75rem;
@@ -218,7 +259,8 @@ header {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.4s ease;
+  font-family: "Roboto mono", monospace;
 }
 .submit-button:hover {
   background-color: #09a3c5;
@@ -250,18 +292,239 @@ header {
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+.modal-content h2 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+}
 #reportModal.show .modal-content {
   transform: translateY(0);
   opacity: 1;
 }
+.section-abrigo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.abrigo-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #063e48;
+  gap: 0.5rem;
+  text-align: center;
+}
+.abrigo-article h1 {
+  font-family: "montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.abrigo-article h2 {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.abrigos-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.abrigos-list-container h2 {
+  font-family: "montserrat", sans-serif;
+  color: #063e48;
+  font-weight: 500;
+}
+.container-cards {
+  display: flex;
+  gap: 1.5rem;
+}
+.abrigo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1rem;
+  gap: 0.5rem;
+  transition: 0.4s ease;
+}
+.abrigo-card h3 {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #063e48;
+}
+.abrigo-card ul {
+  list-style: none;
+}
+.abrigo-card ul li {
+  font-family: "Roboto mono", monospace;
+}
+.abrigo-card ul li a {
+  display: flex;
+  text-decoration: none;
+  color: #063e48;
+  transition: 0.4s ease;
+}
+.abrigo-card:hover {
+  transform: scale(1.05);
+}
+.abrigo-card ul li a:hover {
+  transform: scale(1.05);
+}
+.direction {
+  font-family: "Roboto mono", monospace;
+}
+:root {
+  --font-title: 2.2rem;
+  --font-subtitle: 1.2rem;
+  --font-family: "Arial", sans-serif;
+  --color-primary: #09a3c5;
+  --color-bg: #f7f7f7;
+  --color-card-bg: rgba(73, 72, 72, 0.041);
+  --color-text: #333;
+  --color-button-text: #fff;
+  --color-accent: #ff6347;
+}
+.reconhecimento {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: var(--color-card-bg);
+}
+.reconhecimento .recon-caixa {
+  max-width: 800px;
+  width: 100%;
+  padding: 2.5rem 0;
+}
+.reconhecimento .recon-header h2,
+.reconhecimento .recon-main h2 {
+  font-size: var(--font-title);
+  font-family: var(--font-family);
+  padding: 15px 0;
+  color: var(--color-text);
+  text-align: center;
+  position: relative;
+}
+.reconhecimento .recon-header h3,
+.reconhecimento .recon-main h3 {
+  font-size: var(--font-subtitle);
+  font-family: var(--font-family);
+  padding: 5px 0;
+  color: var(--color-text);
+  font-weight: 500;
+  text-align: center;
+}
+.reconhecimento .recon-header p,
+.reconhecimento .recon-main p {
+  color: #666;
+
+  line-height: 1.6;
+  text-align: center;
+}
+.reconhecimento .recon-button-apoio button {
+  background-color: var(--color-primary);
+  padding: 14px 28px;
+  border: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  color: var(--color-button-text);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 163, 197, 0.3);
+}
+.reconhecimento .recon-button-apoio button:hover {
+  background-color: #068a9e;
+  box-shadow: 0 8px 20px rgba(0, 163, 197, 0.5);
+}
+.linha {
+  margin: 25px 0;
+  opacity: 0.3;
+  border-bottom: 2px solid var(--color-accent);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1024px) {
+  .reconhecimento {
+    padding: 2.5rem 1rem;
+  }
+  .reconhecimento .recon-caixa {
+    padding: 2rem;
+  }
+  .reconhecimento .recon-header h2,
+  .reconhecimento .recon-main h2 {
+    font-size: 1.8rem;
+  }
+  .reconhecimento .recon-header h3,
+  .reconhecimento .recon-main h3 {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 768px) {
+  .article-start {
+    margin-top: 1rem;
+  }
+  .article-start h1 {
+    font-size: 1.8rem;
+  }
   .start-form textarea {
     min-height: 150px;
+    font-size: 0.6rem;
+    width: 21rem;
+    padding: 0.75rem;
   }
   .start-form input[type="text"],
-  .start-form input[type="tel"],
-  .start-form textarea {
+  .start-form input[type="tel"] {
+    width: 9rem;
     padding: 0.75rem;
     font-size: 0.6rem;
+  }
+  .image-upload-input {
+    font-size: 0.7rem;
+
+    width: 100%;
+  }
+  .image-upload-labe {
+    font-size: 0.4rem;
+  }
+  .container-cards {
+    flex-direction: column;
+    padding: 2rem 3rem;
+  }
+  .abrigo-card {
+    padding: 3rem 1rem;
+  }
+  .abrigo-card h3 {
+    font-size: 1.5rem;
+  }
+  .abrigo-card ul li a {
+    font-size: 0.8rem;
+  }
+  .reconhecimento {
+    padding: 1.5rem 0.5rem;
+  }
+  .reconhecimento .recon-caixa {
+    padding: 1.5rem;
+  }
+  .reconhecimento .recon-header h2,
+  .reconhecimento .recon-main h2 {
+    font-size: 1.5rem;
+  }
+  .reconhecimento .recon-header h3,
+  .reconhecimento .recon-main h3 {
+    font-size: 0.9rem;
   }
 }
