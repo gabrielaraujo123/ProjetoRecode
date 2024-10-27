@@ -58,6 +58,19 @@ function validateForm(event) {
     return;
   }
 
+  function formatPhoneInput(input) {
+    let value = input.value.replace(/\D/g, "");
+    if (value.length > 10) value = value.slice(0, 10);
+
+    // Aplica a formatação (99) 9999-9999
+    const formattedValue = value.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
+    input.value = formattedValue;
+  }
+
+  document.getElementById("contact").addEventListener("input", function () {
+    formatPhoneInput(this);
+  });
+
   alert("Relato feito com sucesso!");
   resetFormFields();
   closeReportModal();
