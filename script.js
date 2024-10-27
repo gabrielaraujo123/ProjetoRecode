@@ -86,8 +86,6 @@ document.getElementById("contact").addEventListener("input", function () {
 const textareaInformacoesAdicionais =
   document.getElementById("additional-info");
 
-const mensagemInicial = "Esta é a minha informação adicional.";
-
 if (mensagemInicial.length > 300) {
   textareaInformacoesAdicionais.value = mensagemInicial.slice(0, 300);
 } else {
