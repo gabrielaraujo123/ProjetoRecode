@@ -93,8 +93,3 @@ function updateCharacterCount() {
 updateCharacterCount();
 
 document.getElementById("reportForm").addEventListener("submit", validateForm);
-
-function toggleModal(modalId) {
-  const modal = document.getElementById(modalId);
-  modal.classList.toggle("show");
-}
