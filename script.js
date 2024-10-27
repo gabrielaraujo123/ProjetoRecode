@@ -84,11 +84,11 @@ document.getElementById("contact").addEventListener("input", function () {
 });
 
 function updateCharacterCount() {
-  const maxChars = 300;
   const infoField = document.getElementById("info");
-  const charCountDisplay = document.getElementById("charCount");
-  const remainingChars = maxChars - infoField.value.length;
-  charCountDisplay.textContent = `${remainingChars} caracteres restantes`;
+  const characterCount = document.getElementById("characterCount");
+  const maxLength = 300;
+  const remaining = maxLength - infoField.value.length;
+  characterCount.textContent = `${remaining} caracteres restantes`;
 }
 updateCharacterCount();
 
