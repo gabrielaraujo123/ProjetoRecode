@@ -83,4 +83,13 @@ document.getElementById("contact").addEventListener("input", function () {
   formatPhoneInput(this);
 });
 
+const infoField = document.getElementById("additional-info");
+const maxChars = 300;
+
+infoField.addEventListener("input", () => {
+  if (infoField.value.length > maxChars) {
+    infoField.value = infoField.value.slice(0, maxChars);
+  }
+});
+
 document.getElementById("reportForm").addEventListener("submit", validateForm);
