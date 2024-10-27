@@ -527,4 +527,7 @@ header {
   .reconhecimento .recon-main h3 {
     font-size: 0.9rem;
   }
+  #additional-info:invalid {
+    border: 2px solid red;
+  }
 }
