@@ -55,19 +55,31 @@
             <div class="abrigo-card">
               <h3>Cidade: Porto Alegre</h3>
               <ul class="list-abrigos">
-                <li><strong>Abrigo Esperança</strong> - Rua das Flores, 123</li>
                 <li>
-                  <strong>Abrigo Nova Vida</strong> - Avenida Central, 456
+                  <a href=""
+                    ><strong>Abrigo Esperança</strong> - Rua das Flores, 123</a
+                  >
                 </li>
-                <li><strong>Abrigo Santo Antônio</strong> - Rua da Paz, 789</li>
+                <li>
+                  <a href="">
+                    <strong>Abrigo Nova Vida</strong> - Avenida Central, 456
+                  </a>
+                </li>
+                <li>
+                  <a href=""
+                    ><strong>Abrigo Santo Antônio</strong> - Rua da Paz, 789</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="abrigo-card">
               <h3>Cidade: Caxias do Sul</h3>
               <ul>
-                <li><strong>Abrigo São José</strong> - Rua Verde, 101</li>
+                <li><a href=""><strong>Abrigo São José</strong> - Rua Verde, 101</a></li>
                 <li>
+                  <a href="">
                   <strong>Abrigo Amparo</strong> - Avenida dos Pinhais, 202
+                </a>
                 </li>
               </ul>
             </div>
@@ -75,13 +87,71 @@
               <h3>Cidade: Pelotas</h3>
               <ul>
                 <li>
+                  <a href="">
                   <strong>Abrigo Esperança do Sul</strong> - Rua da Lagoa, 303
                 </li>
-                <li><strong>Abrigo Luz do Sol</strong> - Rua Alegre, 404</li>
+              </a>
+                <li>
+                  <a href="">
+                    <strong>Abrigo Luz do Sol</strong> - Rua Alegre, 404
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
         </nav>
+      </section>
+      <section class="reconhecimento">
+        <div class="recon-caixa">
+          <div class="recon-header">
+            <h2>Reconhecimento e Agradecimento</h2>
+            <h3>Apoiadores que Transformam Vidas</h3>
+            <p>
+              Aqui, celebramos nossos apoiadores, cujo compromisso e
+              generosidade fazem a diferença diariamente. Agradecemos a cada um
+              por sua contribuição para um futuro melhor.
+            </p>
+          </div>
+          <hr class="linha" />
+          <div class="recon-main">
+            <div class="recon-main-parceiro">
+              <div>
+                <h3>Supermercado Real</h3>
+                <p>
+                  Doação contínua de alimentos para a nossa campanha de combate
+                  à fome.
+                </p>
+              </div>
+              <h3>Grupo Construtora Mais</h3>
+              <p>Fornecimento de materiais para reconstrução de lares.</p>
+            </div>
+            <hr class="linha" />
+            <div class="recon-main-destaque">
+              <h2>Voluntários em Destaque</h2>
+              <div>
+                <h3>Carla Mendes</h3>
+                <p>
+                  Dedicou 50 horas para auxiliar na distribuição de doações e
+                  suporte emocional.
+                </p>
+              </div>
+              <div>
+                <h3>Lucas Rocha</h3>
+                <p>
+                  Participa regularmente da coleta de itens e gestão de eventos
+                  de arrecadação.
+                </p>
+              </div>
+            </div>
+
+            <div class="recon-button-apoio">
+              <p>
+                Faça Parte Desta Lista! Contribua Hoje e Ajude a Mudar Vidas.
+              </p>
+              <button onclick="openModal()">faça doação</button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <div class="modal" id="donationModal">
@@ -106,18 +176,18 @@
               type="text"
               id="location"
               name="location"
-              placeholder="Por favor, digite o local da enchente"
+              placeholder="Digite o endereço completo"
               required
             />
             <input
               type="tel"
               id="contact"
               name="contact"
-              placeholder="Telefone para Contato"
+              placeholder="(99) 9999-9999" maxlength="14"
               required
             />
             <textarea
-              id="info"
+              id="additional-info"
               name="info"
               placeholder="Informações Adicionais"
             ></textarea>

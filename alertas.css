@@ -1,22 +1,25 @@
 .galery {
-    width: 640px;
-    height: 360px;
-    background-color: black;
+    position: relative;
+    width: 640px; 
+    height: 360px; 
     overflow: hidden;
-   
 }
 
-.galery .fotos {
+.fotos {
     width: 500%;
+    transition: margin-left 0.5s ease; 
+}
+.fotos.animado{
     animation-name: animacao;
     animation-duration: 20s;
     animation-iteration-count: infinite;
 }
-.galery .fotos .img {
-    width: 20%;
-    
 
+.fotos img {
+    width: 20%; 
+    flex-shrink: 0; 
 }
+
 
 @keyframes animacao {
     0% { margin-left: 0;}
@@ -30,10 +33,100 @@
     100% { margin-left: -400%;}
     
 }
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#prev {
+    left: 10px; 
+}
+
+#next {
+    right: 10px; 
+}
+.locations {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+
+ h4 {
+    background-color: #f5f5f5;    /* Cor de fundo mais visível */
+    padding: 15px 25px;
+    border-radius: 15px;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: 1px solid #20a8b5;
+    color: #0a0a0b;                  /* Cor do texto */
+}
+
+h4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #5d7de0, #357abd); /* Gradiente mais escuro */
+}
+
+
+
+
 .container {
     place-items: center;
+    padding: 10px;
+   
+   
+}
+.containerfotos {
+    border-radius: 15px;
     
 }
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.601);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  #prev {
+    left: 10px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  #next {
+    right: 10px; 
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  #colorcard{
+    color:#1338a7
+
+  }
+  .hr{
+    color: #0a0a0b;
+    
+    
+  }
+
 
 
     
