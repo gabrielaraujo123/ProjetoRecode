@@ -84,7 +84,7 @@ document.getElementById("contact").addEventListener("input", function () {
 });
 
 const infoField = document.getElementById("additional-info");
-const maxChars = 4;
+const maxChars = 300;
 
 infoField.addEventListener("input", () => {
   if (infoField.value.length > maxChars) {
