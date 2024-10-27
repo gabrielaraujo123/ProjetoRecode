@@ -37,63 +37,6 @@ function toggleMenu() {
   hamburger.classList.toggle("open");
 }
 
-function showSuccessMessage() {
-  const responseMessage = document.getElementById("responseMessage");
-  responseMessage.style.display = "block";
-  responseMessage.innerText = "Relato feito com sucesso!";
-  setTimeout(() => {
-    responseMessage.style.display = "none";
-  }, 3000);
-}
-
-function validateForm(event) {
-  event.preventDefault();
-
-  const contactInput = document.getElementById("contact");
-  const contactValue = contactInput.value.replace(/\D/g, "");
-  const onlyNumbers = /^\d+$/;
-
-  alert("Relato feito com sucesso!");
-  resetFormFields();
-  closeReportModal();
-}
-
-function resetFormFields() {
-  document.getElementById("reportForm").reset();
-}
-
-function formatPhoneInput(input) {
-  let value = input.value.replace(/\D/g, "");
-
-  // Limita o valor a 10 dígitos
-  if (value.length > 10) value = value.slice(0, 10);
-
-  if (value.length > 6) {
-    input.value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(
-      6
-    )}`;
-  } else if (value.length > 2) {
-    input.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
-  } else {
-    input.value = value;
-  }
-}
-
-document.getElementById("contact").addEventListener("input", function () {
-  formatPhoneInput(this);
-});
-
-const infoField = document.getElementById("additional-info");
-const maxChars = 300;
-
-infoField.addEventListener("input", () => {
-  if (infoField.value.length > maxChars) {
-    infoField.value = infoField.value.slice(0, maxChars);
-  }
-});
-
-document.getElementById("reportForm").addEventListener("submit", validateForm);
-
 /*     parte Gabriel pagina alerta      */
 
 document.addEventListener('DOMContentLoaded', function() {

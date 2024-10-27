@@ -127,6 +127,30 @@ h4:hover {
     
   }
 
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Mais espaço entre os cards */
+    transition: transform 0.2s;
+  }
 
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #5d7de0, #fdfefe); /* Gradiente mais escuro */
+
+  }
+
+.footer {
+    place-items: center;
+    color: white;
+    background-color: black; 
+    height: 200px;
+    
+
+}
 
     
