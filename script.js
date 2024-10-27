@@ -103,3 +103,18 @@ document.addEventListener("DOMContentLoaded", function () {
     retomarAnimacao();
   });
 });
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+window.addEventListener("scroll", () => {
+  const scrollTopButton = document.getElementById("scrollTopButton");
+  if (window.scrollY > 200) {
+    scrollTopButton.classList.add("show");
+    scrollTopButton.classList.remove("hide");
+  } else {
+    scrollTopButton.classList.add("hide");
+    scrollTopButton.classList.remove("show");
+  }
+});
