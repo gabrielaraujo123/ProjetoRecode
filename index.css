@@ -527,25 +527,4 @@ header {
   .reconhecimento .recon-main h3 {
     font-size: 0.9rem;
   }
-
-  /* Estilos para o textarea e o contador de caracteres */
-  .textarea-wrapper {
-    position: relative;
-    width: 100%;
-  }
-
-  #additional-info {
-    width: 100%;
-    padding-right: 120px; /* Espaco para o texto sobreposto */
-    box-sizing: border-box;
-  }
-
-  #character-count-overlay {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 0.9em;
-    color: #555;
-    pointer-events: none;
-  }
 }

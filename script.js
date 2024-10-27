@@ -83,13 +83,13 @@ document.getElementById("contact").addEventListener("input", function () {
   formatPhoneInput(this);
 });
 
-const textarea = document.getElementById("additional-info");
-const charCount = document.getElementById("character-count-overlay");
-
-// Atualiza o contador conforme o usuário digita
-textarea.addEventListener("input", () => {
-  const remaining = 300 - textarea.value.length;
-  charCount.textContent = `${remaining} caracteres restantes`;
-});
+function updateCharacterCount() {
+  const maxChars = 300;
+  const infoField = document.getElementById("info");
+  const charCountDisplay = document.getElementById("charCount");
+  const remainingChars = maxChars - infoField.value.length;
+  charCountDisplay.textContent = `${remainingChars} caracteres restantes`;
+}
+updateCharacterCount();
 
 document.getElementById("reportForm").addEventListener("submit", validateForm);
