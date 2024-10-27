@@ -4,6 +4,7 @@
 }
 body {
   background: linear-gradient(to right, #cdffd8, #94b9ff);
+  overflow-x: hidden;
 }
 header {
   display: flex;
@@ -540,4 +541,17 @@ header {
   .reconhecimento .recon-main h3 {
     font-size: 0.9rem;
   }
+}
+
+.footer {
+  place-items: center;
+  color: white;
+  background-color: black;
+  text-align: center;
+  height: 49px;
+}
+
+.footer p {
+  padding: 12px;
+  margin: 0 auto;
 }
