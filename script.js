@@ -53,11 +53,6 @@ function validateForm(event) {
   const contactValue = contactInput.value.replace(/\D/g, "");
   const onlyNumbers = /^\d+$/;
 
-  if (!onlyNumbers.test(contactValue)) {
-    alert("Por favor, insira apenas números no campo de telefone.");
-    return;
-  }
-
   alert("Relato feito com sucesso!");
   resetFormFields();
   closeReportModal();
