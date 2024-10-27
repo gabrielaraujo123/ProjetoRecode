@@ -83,13 +83,4 @@ document.getElementById("contact").addEventListener("input", function () {
   formatPhoneInput(this);
 });
 
-const textareaInformacoesAdicionais =
-  document.getElementById("additional-info");
-
-if (mensagemInicial.length > 300) {
-  textareaInformacoesAdicionais.value = mensagemInicial.slice(0, 300);
-} else {
-  textareaInformacoesAdicionais.value = mensagemInicial;
-}
-
 document.getElementById("reportForm").addEventListener("submit", validateForm);
