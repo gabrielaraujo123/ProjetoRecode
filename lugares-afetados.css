@@ -5,20 +5,16 @@
   box-sizing: border-box;
 }
 
-body {
-  line-height: 1.6; /* Linha mais espaçada para facilitar a leitura */
-}
-
 .container {
   padding: 20px;
-  max-width: 1200px;
+
   margin: 0 auto;
   text-align: center;
 }
 
 /* Estilos de título modernos */
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2.5em;
   font-weight: 700;
   color: #333;
@@ -27,7 +23,7 @@ h1 {
 }
 
 .section h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #005a8e;
@@ -38,7 +34,7 @@ h1 {
 }
 
 .card h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #005a8e;
   font-size: 1.5rem;
   font-weight: 500;
@@ -85,7 +81,8 @@ footer {
   width: 100%;
 }
 
-footer p, footer a {
+footer p,
+footer a {
   margin-top: 10px; /* Espaço entre links e parágrafos */
 }
 
@@ -106,7 +103,7 @@ footer p, footer a {
 }
 
 .footer-section h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.2em;
   font-weight: 600;
   color: #f5a623;
