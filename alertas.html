@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./alertas.css" />
     <link rel="icon" href="./assets/maos.png" type="image/x-icon" />
-    
     <script src="./script.js" defer></script>
     <title>Alertas</title>
   </head>
@@ -32,100 +31,130 @@
     </header>
     <span class="direction">Início > Riscos Eminentes</span>
     <div class="modal" id="donationModal">
-        <div class="modal-content">
-          <span class="close" onclick="closeDonationModal()">&times;</span>
-          <h2>Ajude as vítimas de enchentes</h2>
-          <p>
-            Sua doação pode fazer a diferença para muitas famílias afetadas pelas
-            enchentes.
-          </p>
-          <p><strong>Chave PIX:</strong> doacao@gmail.com</p>
-          <p>Agradecemos imensamente pela sua contribuição!</p>
-        </div>
+      <div class="modal-content">
+        <span class="close" onclick="closeDonationModal()">&times;</span>
+        <h2>Ajude as vítimas de enchentes</h2>
+        <p>
+          Sua doação pode fazer a diferença para muitas famílias afetadas pelas
+          enchentes.
+        </p>
+        <p><strong>Chave PIX:</strong> doacao@gmail.com</p>
+        <p>Agradecemos imensamente pela sua contribuição!</p>
       </div>
     </div>
-   
+
     <main>
-    
-      <div class="container"> 
+      <div class="container">
         <div class="container">
-            <h1> Alertas de enchentes em tempo real</h1>
-            <h2>Locais relatados com enchentes</h2>
-            <section> 
-              <div class="locations">
-                <h4> CANOAS </h4>
-                <h4> ESTREITO</h4>
-                <h4> GRAMADO</h4>
-                <H4> SANTA MARIA </H4>
-              </div>
-            </section>
+          <h1>Alertas de enchentes em tempo real</h1>
+          <h2>Locais relatados com enchentes</h2>
+          <section>
+            <div class="locations">
+              <button onclick="scrollToCard('canoas')">CANOAS</button>
+              <button onclick="scrollToCard('estreito')">ESTREITO</button>
+              <button onclick="scrollToCard('gramado')">GRAMADO</button>
+              <button onclick="scrollToCard('santaMaria')">SANTA MARIA</button>
+            </div>
+          </section>
         </div>
-                <div class="container">
-                    <section class="galery containerfotos" >
-                        <div class="fotos">
-                            <img src="./assets/resized_image_1.jpg" alt="Imagem 1">
-                            <img src="./assets/resized_image_2.jpg" alt="Imagem 2">
-                            <img src="./assets/resized_image_3.jpg" alt="Imagem 3">
-                            <img src="./assets/resized_image_4.jpg" alt="Imagem 4">
-                        </div>
-                        <button id="prev" class="nav-button"><</button>
-                        <button id="next" class="nav-button">></button>
-                    </section>
-                </div>
-              <div class="container-cards">
-                    <div class="card">
-                      <h2 id="colorcard"> CANOAS</h2>
-                      <hr>
-                      <p>Boa noite! Estou no Bairro Niterói, em Canoas, onde uma chuva muito forte atingiu a região. Os moradores estão em situação de pânico, após a água alcançar a altura da cintura. Precisamos de evacuação o mais rápido possível, principalmente para idosos e crianças.</p>
-                      <p>Registrado:25/10/2024</p> 
-                      <p>Hora: 20 h:15 min </p>
-                    </div>
 
-                    <div class="card">
-                      <h2 id="colorcard"> ESTREITO </h2>
-                      <hr> 
-                      <p> Boa tarde! Estou no Bairro Centro, em Estreito, onde a chuva intensa das últimas horas tem causado preocupação entre os moradores. As ruas estão alagadas e a água já atinge a altura dos telhados em algumas áreas. É fundamental que as autoridades locais atuem rapidamente para garantir a segurança da população, especialmente para os mais vulneráveis, como idosos e crianças. A situação é crítica e precisamos de apoio imediato!</p>
-                      <p>Registrado:24/10/2024</p> 
-                      <p>Hora: 17 h:35 min </p>
-                    </div>
+        <div class="container">
+          <section class="galery containerfotos">
+            <div class="fotos">
+              <img src="./assets/resized_image_1.jpg" alt="Imagem 1" />
+              <img src="./assets/resized_image_2.jpg" alt="Imagem 2" />
+              <img src="./assets/resized_image_3.jpg" alt="Imagem 3" />
+              <img src="./assets/resized_image_4.jpg" alt="Imagem 4" />
+            </div>
+            <button id="prev" class="nav-button"><</button>
+            <button id="next" class="nav-button">></button>
+          </section>
+        </div>
 
-                    <div class="card">
-                      <h2 id="colorcard"> GRAMADO</h2>
-                      <hr>
-                      <p> Bom dia! Estou no Bairro Bavária, em Gramado, onde uma intensa chuva afetou a região. Os moradores estão preocupados, pois a água já subiu consideravelmente em algumas ruas. É urgente que as autoridades tomem medidas para garantir a segurança da população, especialmente para idosos e crianças. A situação requer atenção imediata!</p>
-                      <p>Registrado:22/10/2024</p> 
-                      <p>Hora: 9 h:45 min </p>
-                    </div>
+        <div class="container-cards">
+          <div class="card" id="canoas">
+            <h2>CANOAS</h2>
+            <hr />
+            <p>
+              Boa noite! Estou no Bairro Niterói, em Canoas, onde uma chuva
+              muito forte atingiu a região. Os moradores estão em situação de
+              pânico, após a água alcançar a altura da cintura. Precisamos de
+              evacuação o mais rápido possível, principalmente para idosos e
+              crianças.
+            </p>
+            <p>Registrado: 25/10/2024</p>
+            <p>Hora: 20 h:15 min</p>
+          </div>
 
+          <div class="card" id="estreito">
+            <h2>ESTREITO</h2>
+            <hr />
+            <p>
+              Boa tarde! Estou no Bairro Centro, em Estreito, onde a chuva
+              intensa das últimas horas tem causado preocupação entre os
+              moradores. As ruas estão alagadas e a água já atinge a altura dos
+              telhados em algumas áreas. É fundamental que as autoridades locais
+              atuem rapidamente para garantir a segurança da população,
+              especialmente para os mais vulneráveis, como idosos e crianças. A
+              situação é crítica e precisamos de apoio imediato!
+            </p>
+            <p>Registrado: 24/10/2024</p>
+            <p>Hora: 17 h:35 min</p>
+          </div>
 
+          <div class="card" id="gramado">
+            <h2>GRAMADO</h2>
+            <hr />
+            <p>
+              Bom dia! Estou no Bairro Bavária, em Gramado, onde uma intensa
+              chuva afetou a região. Os moradores estão preocupados, pois a água
+              já subiu consideravelmente em algumas ruas. É urgente que as
+              autoridades tomem medidas para garantir a segurança da população,
+              especialmente para idosos e crianças. A situação requer atenção
+              imediata!
+            </p>
+            <p>Registrado: 22/10/2024</p>
+            <p>Hora: 9 h:45 min</p>
+          </div>
 
-                    <div class="card">
-                      <h2 id="colorcard"> SANTA MARIA</h2>
-                      <hr>
-                      <p> Boa tarde! Estou no Bairro Nossa Senhora de Fátima, em Santa Maria, onde uma forte chuva está causando transtornos. Os moradores estão apreensivos, pois a água já subiu bastante em algumas áreas. É urgente que as autoridades intervenham para garantir a segurança de todos, especialmente de idosos e crianças. Precisamos de ajuda imediata!</p>
-                      <p>Registrado:25/10/2024</p> 
-                      <p>Hora: 15 h:24 min </p>
-                    </div>
-              </div>
-            
-
+          <div class="card" id="santaMaria">
+            <h2>SANTA MARIA</h2>
+            <hr />
+            <p>
+              Boa tarde! Estou no Bairro Nossa Senhora de Fátima, em Santa
+              Maria, onde uma forte chuva está causando transtornos. Os
+              moradores estão apreensivos, pois a água já subiu bastante em
+              algumas áreas. É urgente que as autoridades intervenham para
+              garantir a segurança de todos, especialmente de idosos e crianças.
+              Precisamos de ajuda imediata!
+            </p>
+            <p>Registrado: 25/10/2024</p>
+            <p>Hora: 15 h:24 min</p>
           </div>
         </div>
-          
-
-      
-        
-        
+      </div>
     </main>
+
     <!-- Footer -->
     <footer class="footer">
-      
       <p>&copy; 2024 Enchentes RS - Todos os direitos reservados.</p>
-      
     </footer>
-    <button onclick="scrollToTop()" id="scrollTopButton" class="scroll-top-button">
-      ↑ 
+
+    <button
+      onclick="scrollToTop()"
+      id="scrollTopButton"
+      class="scroll-top-button"
+    >
+      ↑
     </button>
-    
-    </body>
-  </html>
+
+    <script>
+      function scrollToCard(cardId) {
+        const card = document.getElementById(cardId);
+        if (card) {
+          card.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>

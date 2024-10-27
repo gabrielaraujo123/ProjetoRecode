@@ -87,7 +87,7 @@
   padding: 20px;
 }
 
-h4 {
+.locations button {
   font-family: "montserrat", sans-serif;
   font-weight: 400;
   color: #043438;
@@ -102,7 +102,7 @@ h4 {
   color: #0a0a0b; /* Cor do texto */
 }
 
-h4:hover {
+.locations button:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   background: linear-gradient(
@@ -120,11 +120,10 @@ h4:hover {
   border-radius: 15px;
 }
 .container-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-  padding: 5rem 1.5rem;
+  padding: 5rem 20rem;
 }
 .nav-button {
   position: absolute;
@@ -185,4 +184,13 @@ h4:hover {
     #5d7de0,
     #fdfefe
   ); /* Gradiente mais escuro */
+}
+
+@media (max-width: 768px) {
+  .container-cards {
+    padding: 5rem 3rem;
+  }
+  .locations {
+    flex-direction: column;
+  }
 }
