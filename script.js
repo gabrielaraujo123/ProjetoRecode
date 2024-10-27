@@ -83,13 +83,15 @@ document.getElementById("contact").addEventListener("input", function () {
   formatPhoneInput(this);
 });
 
-function updateCharacterCount() {
-  const maxChars = 300;
-  const infoField = document.getElementById("info");
-  const charCountDisplay = document.getElementById("charCount");
-  const remainingChars = maxChars - infoField.value.length;
-  charCountDisplay.textContent = `${remainingChars} caracteres restantes`;
+const textareaInformacoesAdicionais =
+  document.getElementById("additional-info");
+
+const mensagemInicial = "Esta é a minha informação adicional.";
+
+if (mensagemInicial.length > 300) {
+  textareaInformacoesAdicionais.value = mensagemInicial.slice(0, 300);
+} else {
+  textareaInformacoesAdicionais.value = mensagemInicial;
 }
-updateCharacterCount();
 
 document.getElementById("reportForm").addEventListener("submit", validateForm);
