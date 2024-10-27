@@ -535,4 +535,7 @@ header {
     color: #555;
     font-size: 0.9em;
   }
+  .start-form {
+    position: relative;
+  }
 }
