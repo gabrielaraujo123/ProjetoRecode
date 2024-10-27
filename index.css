@@ -527,15 +527,4 @@ header {
   .reconhecimento .recon-main h3 {
     font-size: 0.9rem;
   }
-
-  .character-count {
-    display: block;
-    text-align: right;
-    margin-top: 5px;
-    color: #555;
-    font-size: 0.9em;
-  }
-  .start-form {
-    position: relative;
-  }
 }
