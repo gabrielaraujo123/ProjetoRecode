@@ -70,39 +70,58 @@ function closeCardModal() {
   document.getElementById("infoModal").style.display = "none";
 }
 
-function retomarAnimacao() {
-  clearTimeout(timeoutId);
-  fotos.style.marginLeft = `${-currentIndex * 100}%`;
-  timeoutId = setTimeout(() => fotos.classList.add("animado"), 4000);
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  const fotos = document.querySelector(".fotos");
-  const images = fotos.querySelectorAll("img");
+document.addEventListener('DOMContentLoaded', function() {
+  const fotos = document.querySelector('.fotos');
+  const images = fotos.querySelectorAll('img');
   const totalImages = images.length;
   let currentIndex = 0;
-  let timeoutId;
+  let timeoutId; // Variável para armazenar o ID do setTimeout
 
-  fotos.classList.add("animado");
+  fotos.classList.add('animado');
 
   function updateGallery() {
-    fotos.style.marginLeft = `${-currentIndex * 100}%`;
+    const offset = -currentIndex * 100;
+    fotos.style.marginLeft = `${offset}%`;
   }
 
-  document.getElementById("next").addEventListener("click", () => {
-    fotos.classList.remove("animado");
+  function reiniciarAnimacao() {
+    fotos.classList.remove('animado');
+    fotos.style.marginLeft = '0%';
+    setTimeout(() => {
+      fotos.classList.add('animado');
+    }, 10);
+  }
+
+ 
+  function retomarAnimacao() {
+    clearTimeout(timeoutId); 
+
+    // Define a posição correta da imagem ANTES de reiniciar a animação:
+    fotos.style.marginLeft = `${-currentIndex * 100}%`;
+
+    timeoutId = setTimeout(() => {
+      fotos.classList.add('animado');
+    }, 4000); 
+  }
+
+  document.getElementById('next').addEventListener('click', () => {
+    fotos.classList.remove('animado');
     currentIndex = (currentIndex + 1) % totalImages;
     updateGallery();
-    retomarAnimacao();
+    retomarAnimacao(); // Chama a função para retomar a animação
   });
 
-  document.getElementById("prev").addEventListener("click", () => {
-    fotos.classList.remove("animado");
+  document.getElementById('prev').addEventListener('click', () => {
+    fotos.classList.remove('animado');
     currentIndex = (currentIndex - 1 + totalImages) % totalImages;
     updateGallery();
-    retomarAnimacao();
+    retomarAnimacao(); // Chama a função para retomar a animação
   });
+
+  
 });
+
+;
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
