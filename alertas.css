@@ -91,7 +91,7 @@
   font-family: "montserrat", sans-serif;
   font-weight: 400;
   color: #043438;
-  background-color: #f5f5f5; /* Cor de fundo mais visível */
+  background-color: #f5f5f5;
   padding: 15px 25px;
   border-radius: 15px;
   margin: 0;
@@ -99,17 +99,13 @@
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
   border: 1px solid #20a8b5;
-  color: #0a0a0b; /* Cor do texto */
+  color: #0a0a0b;
 }
 
 .locations button:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(
-    135deg,
-    #5d7de0,
-    #357abd
-  ); /* Gradiente mais escuro */
+  background: linear-gradient(135deg, #5d7de0, #357abd);
 }
 
 .container {
@@ -167,7 +163,7 @@
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 0; /* Mais espaço entre os cards */
+  margin: 20px 0;
   transition: transform 0.2s;
 }
 
@@ -179,11 +175,7 @@
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(
-    135deg,
-    #5d7de0,
-    #fdfefe
-  ); /* Gradiente mais escuro */
+  background: linear-gradient(135deg, #5d7de0, #fdfefe);
 }
 
 @media (max-width: 768px) {
