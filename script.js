@@ -118,3 +118,27 @@ window.addEventListener("scroll", () => {
     scrollTopButton.classList.remove("show");
   }
 });
+
+function validatePhone(phone) {
+  const phoneRegex = /^\d{11}$/;
+  return phoneRegex.test(phone);
+}
+
+document
+  .getElementById("reportForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const phoneInput = document.getElementById("phone");
+    const phone = phoneInput.value.trim();
+
+    if (!validatePhone(phone)) {
+      alert("Por favor, insira um número de telefone válido com 11 dígitos.");
+      phoneInput.focus();
+      return;
+    }
+
+    alert("Relato feito com sucesso!");
+
+    document.getElementById("reportForm").reset();
+  });
